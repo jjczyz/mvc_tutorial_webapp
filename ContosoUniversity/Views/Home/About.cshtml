@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ContosoUniversity.ViewModels.CourseTitleGroup>
+
+@{
+    ViewBag.Title = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Course
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseTitle)
+            </td>
+            <td>
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>
